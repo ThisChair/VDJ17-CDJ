@@ -6,30 +6,22 @@ public class CameraControl : MonoBehaviour {
 
 	[SerializeField]
 	[Tooltip("Objetivo de la Camara")]
-	/// <summary>
 	/// Objetivo actual de camara
-	/// </summary>
 	private GameObject currentTarget;
 
 	[SerializeField]
 	[Tooltip("Tiempo para llegar al objetivo")]
-	/// <summary>
 	/// Duracion de tiempo para moverse a objetivo
-	/// </summary>
 	private float duration = 1f;
 
     [SerializeField]
     [Tooltip("Radio que Marca Estar en Objetivo")]
-    /// <summary>
     /// Radio que Marca Estar en Objetivo
-    /// </summary>
     private float targetRadius = 0.1f;
 
     [SerializeField]
     [Tooltip("Radio que Marca Estar Cerca del Objetivo")]
-    /// <summary>
     /// Radio que Marca Estar Cerca del Objetivo
-    /// </summary>
     private float slowRadius = 3f;
 
     #region Temporales
@@ -38,23 +30,17 @@ public class CameraControl : MonoBehaviour {
     #endregion
 
     #region Fisica
-    /// <summary>
     /// Velocidad de Camara
-    /// </summary>
     private Vector3 velocity = Vector3.zero;
 
     [SerializeField]
     [Tooltip("Velocidad Maxima")]
-    /// <summary>
     /// Velocidad Maxima
-    /// </summary>
     private float maxSpeed = 10f;
 
     [SerializeField]
     [Tooltip("Aceleracion Maxima")]
-    /// <summary>
     /// Aceleracion Maxima
-    /// </summary>
     private float maxAcc = 10f;
     #endregion
 

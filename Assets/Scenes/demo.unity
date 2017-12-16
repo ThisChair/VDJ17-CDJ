@@ -382,7 +382,7 @@ MonoBehaviour:
   jumpButton: Jump
   canMove: 1
   canJump: 1
-  maxJumpHeight: 5
+  maxJumpHeight: 1
   debugInitialJumpVel: 0
   heightOffset: 0
   isGroundedRadius: 1
@@ -390,7 +390,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   debugIsGrounded: 0
-  velocity: {x: 0, y: 0}
   runner: 0
 --- !u!23 &1144658133
 MeshRenderer:
