@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 342727763}
   - component: {fileID: 342727764}
   m_Layer: 0
-  m_Name: ProgressCircle2
+  m_Name: Loading Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,7 +901,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Level 1
+          m_StringArgument: Demo
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -4899,7 +4899,7 @@ GameObject:
   - component: {fileID: 2050477908}
   - component: {fileID: 2050477907}
   m_Layer: 0
-  m_Name: fragments
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4932,7 +4932,7 @@ Animator:
   m_GameObject: {fileID: 2050477905}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5e951349df7c54f43a72a832041dad32, type: 2}
+  m_Controller: {fileID: 9100000, guid: dc0ccdef4e4751342a7b50b0ebb672c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

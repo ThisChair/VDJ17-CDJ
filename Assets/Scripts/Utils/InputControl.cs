@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InputControl : MonoBehaviour
 {
+
+    public bool action1WasPress;
 
     public float verticalDir;
     public float horizontalDir;
@@ -13,6 +13,11 @@ public class InputControl : MonoBehaviour
 
     private bool horizontalInputTMP;
     private bool verticalInputTMP;
+
+
+    private bool Action1WasPress() {
+        return Input.GetButtonDown("Jump");
+    }
 
     private void HorizontalAxis()
     {
@@ -51,6 +56,8 @@ public class InputControl : MonoBehaviour
 
     private void Update()
     {
+        action1WasPress = Action1WasPress();
+
         HorizontalAxis();
         VerticalAxis();
     }
