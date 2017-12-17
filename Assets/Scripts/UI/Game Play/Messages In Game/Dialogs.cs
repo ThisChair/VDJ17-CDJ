@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialogs : Message
 {
@@ -6,6 +7,8 @@ public class Dialogs : Message
     Text dialog;
     bool firtsMessage;
     InputControl input;
+
+    public PlayerController player;
 
     public override void Start()
     {
@@ -20,6 +23,7 @@ public class Dialogs : Message
 
         if (anyMessage && firtsMessage)
         {
+            player.canMove = false;
             firtsMessage = false;
             dialog.text = ConsumeMessage();
         }
@@ -36,14 +40,15 @@ public class Dialogs : Message
         }
     }
 
-    private void FadeOutTransition() {
-        if (img != null && text != null) {
-
+    private void FadeOutTransition()
+    {
+        if (img != null && text != null)
+        {
             onTrigger = false;
             firtsMessage = true;
 
             StartCoroutine(fadeMessages.FadeOut(img, text));
-
+            player.canMove = true;
         }
     }
 }
