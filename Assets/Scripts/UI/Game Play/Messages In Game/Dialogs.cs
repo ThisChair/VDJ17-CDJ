@@ -7,7 +7,6 @@ public class Dialogs : Message
     Text dialog;
     bool firtsMessage;
     InputControl input;
-
     public PlayerController player;
 
     public override void Start()
@@ -28,16 +27,47 @@ public class Dialogs : Message
             dialog.text = ConsumeMessage();
         }
 
-        if (anyMessage && input.action1WasPress)
+        if (!isDecision)
         {
-
-            dialog.text = ConsumeMessage();
-
-            if (messages.Count == 0)
+            if (anyMessage && input.action1WasPress)
             {
-                Invoke("FadeOutTransition", 2);
+
+                dialog.text = ConsumeMessage();
+
+                if (messages.Count == 0)
+                {
+                    Invoke("FadeOutTransition", 2);
+                }
             }
         }
+
+        else
+        {
+            if (anyMessage && input.action3WasPress)
+            {
+                dialog.text = ConsumeMessage();
+
+                if (messages.Count == 0)
+                {
+                    Invoke("FadeOutTransition", 2);
+                }
+
+                print("Good decision");
+            }
+
+            else if (anyMessage && input.action4WasPress)
+            {
+                dialog.text = ConsumeMessage();
+
+                if (messages.Count == 0)
+                {
+                    Invoke("FadeOutTransition", 0.4f);
+                }
+
+                print("Bad decision");
+            }
+        }
+
     }
 
     private void FadeOutTransition()

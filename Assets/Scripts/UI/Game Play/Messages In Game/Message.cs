@@ -20,6 +20,8 @@ public class Message : MonoBehaviour
     public AudioClip clip;
     public FadeMethods fadeMessages = new FadeMethods();
 
+    public bool isDecision;
+
     public virtual void Start()
     {
         img = transform.parent.GetComponent<Image>();
@@ -32,8 +34,16 @@ public class Message : MonoBehaviour
         return message = messages.Dequeue();
     }
 
-    public void SetMessages(string[] msgs)
+    public void SetMessages(string[] msgs, bool decisionMsg = false)
     {
+        if (decisionMsg)
+        {
+            isDecision = true;
+        }
+        else {
+            isDecision = false;
+        }
+
         anyMessage = true;
         messages = new Queue<string>(msgs);
 

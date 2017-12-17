@@ -39,7 +39,7 @@ public class TriggerEvent : MonoBehaviour {
             }
 
             else if (messageType == MessageType.DIALOG) {
-                dialog.SetMessages(info.messages);
+                dialog.SetMessages(info.messages, info.isDecision);
 
             }
 
