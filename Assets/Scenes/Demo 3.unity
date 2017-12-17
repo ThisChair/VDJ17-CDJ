@@ -174,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a2a68f670dd6448bbd5b8b0e9f70b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visited: 0
   messageType: 1
   info: {fileID: 11400000, guid: 283c4b2fa19134940b4af78d790f1698, type: 2}
 --- !u!61 &90521698
@@ -742,6 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a2a68f670dd6448bbd5b8b0e9f70b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visited: 0
   messageType: 0
   info: {fileID: 11400000, guid: 37daad3f0da637a43bed1eb137b5813b, type: 2}
 --- !u!61 &852457792
@@ -1638,8 +1640,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 11.52, y: 7.68}
+  m_DrawMode: 2
+  m_Size: {x: 30, y: 7.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2783,6 +2785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a2a68f670dd6448bbd5b8b0e9f70b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  visited: 0
   messageType: 2
   info: {fileID: 11400000, guid: 283c4b2fa19134940b4af78d790f1698, type: 2}
 --- !u!61 &1344760355
