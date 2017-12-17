@@ -1,21 +1,42 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Message : MonoBehaviour {
 
-    public bool anyMessage;
+    [HideInInspector] public bool onTrigger;
+    [HideInInspector] public bool anyMessage;
 
-    public string message;
-    public Queue<string> mesagges;
+    [HideInInspector] public string message;
+    public Queue<string> messages;
+
+    [HideInInspector] public Image img;
+    [HideInInspector] public Text text;
+
+    public Color spriteColor;
+    public Color textColor;
+
+    public AudioClip clip;
+    public FadeMethods fadeMessages = new FadeMethods();
+
+    public virtual void Start()
+    {
+        img = transform.parent.GetComponent<Image>();
+        text = GetComponent<Text>();
+    }
 
     public string ConsumeMessage() {
-        anyMessage = mesagges.Count > 1 ? true : false;
-        return message = mesagges.Dequeue();
+        anyMessage = messages.Count > 1 ? true : false;
+        return message = messages.Dequeue();
     }
 
     public void SetMessages(string[] msgs) {
         anyMessage = true;
-        mesagges = new Queue<string>(msgs);
-    }
+        messages = new Queue<string>(msgs);
 
+        if (clip != null)
+            AudioController.SetAndPlayAudioClip(clip, 0.3f);
+
+        StartCoroutine(fadeMessages.FadeIn(img, text, spriteColor, textColor));
+    }
 }

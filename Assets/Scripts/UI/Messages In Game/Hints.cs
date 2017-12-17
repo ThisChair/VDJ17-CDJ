@@ -5,30 +5,33 @@ using UnityEngine.UI;
 public class Hints : Message
 {
     Text hint;
+    float timeLimit = 4;
     private bool showingMessage;
 
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         hint = GetComponent<Text>();
     }
 
-    void FixedUpdate () {
+    private void Update () {
         if (anyMessage && !showingMessage) {
             showingMessage = true;
             StartCoroutine(DisplayMessages());
         }
     }
 
-
     private IEnumerator DisplayMessages() {
 
         while (anyMessage) {
             hint.text = ConsumeMessage();
-            yield return new WaitForSeconds(2);
-
+            yield return new WaitForSeconds(timeLimit);
         }
 
+        yield return new WaitForSeconds(timeLimit);
+        onTrigger = false;
         showingMessage = false;
+
         yield break;
     }
 }

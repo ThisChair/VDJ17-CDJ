@@ -11,8 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c3d11c7d33bb344ab2f30de06a0599b, type: 3}
   m_Name: Dialogs 01
   m_EditorClassIdentifier: 
-  mesagges:
-  - Oh mi migo
-  - He perdido mi paloma
-  - Que problemon mi madre
-  - Ayayayay
+  messages:
+  - hola
+  - comoe
+  - eoe

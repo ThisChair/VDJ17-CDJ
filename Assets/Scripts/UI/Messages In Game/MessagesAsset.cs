@@ -2,5 +2,5 @@
 
 [CreateAssetMenu(menuName = "Create Message List")]
 public class MessagesAsset : ScriptableObject {
-    public string[] mesagges;
+    public string[] messages;
 }

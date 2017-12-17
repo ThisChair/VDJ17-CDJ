@@ -28,11 +28,11 @@ public class TriggerEvent : MonoBehaviour {
 
             if (messageType == MessageType.HINT)
             {
-                hint.SetMessages(info.mesagges);
+                hint.SetMessages(info.messages);
             }
 
             else if (messageType == MessageType.DIALOG) {
-                dialog.SetMessages(info.mesagges);
+                dialog.SetMessages(info.messages);
 
             }
         }
