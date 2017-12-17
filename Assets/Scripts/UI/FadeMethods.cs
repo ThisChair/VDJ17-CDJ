@@ -90,21 +90,20 @@ public class FadeMethods
         } while (true);
     }
 
-    public IEnumerator ImageFadeOut(Image img, Text txt)
+    public IEnumerator ImageFadeOut(Image img)
     {
 
         do
         {
             if (img.color.a >= 0.05f)
             {
-                hideFade(img, txt);
+                hideFade(img, null);
                 yield return null;
             }
 
             else
             {
                 img.enabled = false;
-                txt.enabled = false;
                 yield break;
             }
 

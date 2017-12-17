@@ -9,6 +9,7 @@ public class ActionBarUI : MonoBehaviour
     public float speed = 1;
 
     public bool turningOn;
+    public bool turningOff;
     private bool display;
 
     public float rightmost;
@@ -47,23 +48,25 @@ public class ActionBarUI : MonoBehaviour
 
             if (bar.value >= rightmost && bar.value <= leftmost)
             {
-                if (input.action2WasPress)
+                if (input.action2WasPress && !turningOff)
                 {
                     print("bien");
+                    StartCoroutine(TurnOff());
                 }
             }
 
             if (bar.value < rightmost || bar.value > leftmost)
             {
-                if (input.action2WasPress)
+                if (input.action2WasPress && !turningOff)
                 {
                     print("mal");
+                    StartCoroutine(TurnOff());
                 }
             }
         }
     }
 
-    IEnumerator TurningOn() {
+    private IEnumerator TurningOn() {
 
         display = true;
         StartCoroutine(fade.ImageFadeIn(ball, ballColor));
@@ -73,6 +76,22 @@ public class ActionBarUI : MonoBehaviour
         yield return new WaitUntil(() => ball.color.a >= 0.95f);
 
         turningOn = false;
+        yield break;
+    }
+
+    private IEnumerator TurnOff() {
+
+        turningOff = true;
+
+        StartCoroutine(fade.ImageFadeOut(ball));
+        StartCoroutine(fade.ImageFadeOut(slider));
+        StartCoroutine(fade.ImageFadeOut(zoneAcceptation));
+
+        yield return new WaitUntil(() => ball.color.a <= 0.05f);
+
+        display = false;
+        turningOff = false;
+
         yield break;
     }
 }
