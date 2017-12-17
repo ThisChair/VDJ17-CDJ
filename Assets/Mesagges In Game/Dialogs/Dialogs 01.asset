@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: Dialogs 01
   m_EditorClassIdentifier: 
   messages:
-  - "Evento 1 - Encuentro con el GNB: Di\xE1logo, aparece decisi\xF3n."
-  - "Evento 1 - Encuentro con el GNB: Di\xE1logo, aparece decisi\xF3n."
-  isDecision: 1
+  - 'Guard: Hey there, cutie. Do you happen to have some cash?'
+  isDecision: 0

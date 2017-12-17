@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: Dialogs 03
   m_EditorClassIdentifier: 
   messages:
-  - "Evento 3 - VIEJA DECR\xC9PITA "
-  - "Evento 3 - VIEJA DECR\xC9PITA "
+  - Good evening. Would you help me find my necklace in the trash bin?
   isDecision: 1

@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Name: Dialogs 02
   m_EditorClassIdentifier: 
   messages:
-  - 'Evento 2 - Tipo en las sombras '
-  - 'Evento 2 - Tipo en las sombras '
+  - Hey... Missy... Try this... Maybe?
   isDecision: 1

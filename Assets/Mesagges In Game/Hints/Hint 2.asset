@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Name: Hint 2
   m_EditorClassIdentifier: 
   messages:
-  - Para responder afirmativamente presiona la tecla Y. Para decir que no, presiona
-    la tecla N
-  - Un evento acorde con tu respuesta podria ocurrir
+  - Use movements keys to move around, and Space key to Jump. Try it!
   isDecision: 0
