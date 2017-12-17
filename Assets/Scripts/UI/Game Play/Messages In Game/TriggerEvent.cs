@@ -30,6 +30,7 @@ public class TriggerEvent : MonoBehaviour
     private ActionBarUI actionBar;
 
     public MessagesAsset info;
+    public MessagesAsset mesajeAux;
 
     public bool turnOnActionBar;
     public bool pierdoVida;
@@ -77,9 +78,14 @@ public class TriggerEvent : MonoBehaviour
         {
             switch (enventNum) {
                 case EventNum.ONE:
+
+                    actionBar.SetTurn();
+
                     break;
 
                 case EventNum.TWO:
+                    actionBar.SetTurn();
+
                     break;
 
                 case EventNum.THREE:
@@ -96,9 +102,14 @@ public class TriggerEvent : MonoBehaviour
             switch (enventNum)
             {
                 case EventNum.ONE:
+                    Destroy(desapearGO);
+                    dialog.SetMessages(mesajeAux.messages);
+
                     break;
 
                 case EventNum.TWO:
+                    dialog.SetMessages(mesajeAux.messages);
+
                     break;
 
                 case EventNum.THREE:
