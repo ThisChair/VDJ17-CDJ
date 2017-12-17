@@ -33,7 +33,12 @@ public class ActionBarUI : MonoBehaviour
         bar = GetComponent<Slider>();
     }
 
-    public void Update()
+    public void SetTurn() {
+        turningOn = true;
+        turningOff = false;
+    }
+
+    private void Update()
     {
         if (turningOn) {
             StartCoroutine(TurningOn());
