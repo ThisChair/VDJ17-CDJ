@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         height = GetComponent<CapsuleCollider2D>().size.y / 2f;
         initialJumpVel = JumpInitialVelocity(maxJumpHeight);
+        GetComponent<Rigidbody2D> ().freezeRotation = true;
     }
 
     void Update()
