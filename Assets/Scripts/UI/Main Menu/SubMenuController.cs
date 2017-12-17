@@ -53,23 +53,25 @@ public class SubMenuController : MenuController
 
     public override void Update()
     {
+
         base.Update();
+
         if (input.horizontalInput && input.horizontalDir == -1 && uiItemSeletected.left != null)
         {
+
             if (uiItemSeletected.left.isDropdownField)
             {
                 NextOption(uiItemSeletected.left, -1);
 
-                Debug.Log("dd");
             }
         }
 
         if (input.horizontalInput && input.horizontalDir == 1 && uiItemSeletected.right != null)
         {
+
             if (uiItemSeletected.right.isDropdownField)
             {
                 NextOption(uiItemSeletected.right, 1);
-                Debug.Log("dds");
 
             }
         }

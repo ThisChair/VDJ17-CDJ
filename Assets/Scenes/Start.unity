@@ -1018,7 +1018,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Demo
+          m_StringArgument: Demo 3
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1112,8 +1112,8 @@ MonoBehaviour:
   isDropdownField: 0
   up: {fileID: 1097196166}
   down: {fileID: 1497779714}
-  left: {fileID: 0}
-  right: {fileID: 0}
+  left: {fileID: 1324150697}
+  right: {fileID: 1324150697}
 --- !u!114 &374679474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2782,8 +2782,8 @@ MonoBehaviour:
   isDropdownField: 0
   up: {fileID: 0}
   down: {fileID: 374679473}
-  left: {fileID: 0}
-  right: {fileID: 0}
+  left: {fileID: 969707038}
+  right: {fileID: 969707038}
 --- !u!114 &1097196167
 MonoBehaviour:
   m_ObjectHideFlags: 0

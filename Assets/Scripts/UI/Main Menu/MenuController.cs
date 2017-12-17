@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     public InputControl input;
-
     public OptionsReferences uiItemSeletected;
 
     public AudioSource audioSource;

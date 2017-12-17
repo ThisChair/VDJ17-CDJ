@@ -16,7 +16,6 @@ public class OptionsReferences : MonoBehaviour
 
 	void Start ()
 	{
-
         image = GetComponent<Image>();
         text = GetComponentInChildren<Text>();
         isDropdownField = gameObject.HasComponent<Dropdown>();
