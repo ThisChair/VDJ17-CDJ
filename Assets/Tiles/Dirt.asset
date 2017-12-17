@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ZincRoof
+  m_Name: Dirt
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 0cb0c1820201abf42ab35c8a69d4b807, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b823c95b9a729c441a9b925339d2bb2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
