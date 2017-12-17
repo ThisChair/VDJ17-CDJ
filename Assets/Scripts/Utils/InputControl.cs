@@ -3,20 +3,29 @@
 public class InputControl : MonoBehaviour
 {
 
-    public bool action1WasPress;
+    public KeyCode Action1;
+    public KeyCode Action2;
 
-    public float verticalDir;
-    public float horizontalDir;
+    [HideInInspector] public bool action1WasPress;
+    [HideInInspector] public bool action2WasPress;
 
-    public bool horizontalInput;
-    public bool verticalInput;
+    [HideInInspector] public float verticalDir;
+    [HideInInspector] public float horizontalDir;
+
+    [HideInInspector] public bool horizontalInput;
+    [HideInInspector] public bool verticalInput;
 
     private bool horizontalInputTMP;
     private bool verticalInputTMP;
 
+    private bool Action1WasPress()
+    {
+        return Input.GetKeyDown(Action1);
+    }
 
-    private bool Action1WasPress() {
-        return Input.GetButtonDown("Jump");
+    private bool Action2WasPress()
+    {
+        return Input.GetKeyDown(Action2);
     }
 
     private void HorizontalAxis()
@@ -31,7 +40,8 @@ public class InputControl : MonoBehaviour
             horizontalDir = Input.GetAxisRaw("Horizontal");
         }
 
-        else {
+        else
+        {
             horizontalInputTMP = false;
         }
     }
@@ -57,6 +67,7 @@ public class InputControl : MonoBehaviour
     private void Update()
     {
         action1WasPress = Action1WasPress();
+        action2WasPress = Action2WasPress();
 
         HorizontalAxis();
         VerticalAxis();
