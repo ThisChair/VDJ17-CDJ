@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Name: Dialogs 04
   m_EditorClassIdentifier: 
   messages:
-  - "(El gordo solo est\xE1 ah\xED, ponle un di\xE1logo y despu\xE9s yo veo qu\xE9
-    le pongo) "
-  - "(El gordo solo est\xE1 ah\xED, ponle un di\xE1logo y despu\xE9s yo veo qu\xE9
-    le pongo) "
+  - You win!
   isDecision: 0
