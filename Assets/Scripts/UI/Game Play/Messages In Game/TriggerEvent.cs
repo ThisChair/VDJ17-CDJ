@@ -5,6 +5,13 @@ using UnityEngine;
 public class TriggerEvent : MonoBehaviour
 {
 
+    public enum EventNum {
+        ONE,
+        TWO,
+        THREE,
+        FOUR
+    }
+
     public enum MessageType
     {
         HINT,
@@ -12,7 +19,9 @@ public class TriggerEvent : MonoBehaviour
         ACTION_BAR
     }
 
-    public bool visited;
+    [HideInInspector] public bool visited;
+
+    public EventNum enventNum;
 
     public MessageType messageType;
 
@@ -66,14 +75,38 @@ public class TriggerEvent : MonoBehaviour
         // Good decision
         if (decision)
         {
+            switch (enventNum) {
+                case EventNum.ONE:
+                    break;
 
+                case EventNum.TWO:
+                    break;
+
+                case EventNum.THREE:
+                    break;
+
+                case EventNum.FOUR:
+                    break;
+            }
         }
 
         // Bad Decision
         else
         {
+            switch (enventNum)
+            {
+                case EventNum.ONE:
+                    break;
 
+                case EventNum.TWO:
+                    break;
+
+                case EventNum.THREE:
+                    break;
+
+                case EventNum.FOUR:
+                    break;
+            }
         }
-
     }
 }
