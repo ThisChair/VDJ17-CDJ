@@ -4,8 +4,8 @@ using System.Collections;
 
 public class FadeMethods
 {
-    public float fadeSpeedIn = 1;
-    public float fadeSpeedOut = 0.6f;
+    float fadeSpeedIn = 2.4f;
+    float fadeSpeedOut = 2f;
 
     void hideFade(Image img, Text txt)
     {

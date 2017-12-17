@@ -2,7 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Message : MonoBehaviour {
+public class Message : MonoBehaviour
+{
 
     [HideInInspector] public bool onTrigger;
     [HideInInspector] public bool anyMessage;
@@ -25,12 +26,14 @@ public class Message : MonoBehaviour {
         text = GetComponent<Text>();
     }
 
-    public string ConsumeMessage() {
+    public string ConsumeMessage()
+    {
         anyMessage = messages.Count > 1 ? true : false;
         return message = messages.Dequeue();
     }
 
-    public void SetMessages(string[] msgs) {
+    public void SetMessages(string[] msgs)
+    {
         anyMessage = true;
         messages = new Queue<string>(msgs);
 

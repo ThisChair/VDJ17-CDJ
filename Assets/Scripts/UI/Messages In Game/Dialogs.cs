@@ -10,8 +10,9 @@ public class Dialogs : Message
     public override void Start()
     {
         base.Start();
-        input = FindObjectOfType<InputControl>();
+        firtsMessage = true;
         dialog = GetComponent<Text>();
+        input = FindObjectOfType<InputControl>();
     }
 
     private void Update()
@@ -19,26 +20,30 @@ public class Dialogs : Message
 
         if (anyMessage && firtsMessage)
         {
-            dialog.text = ConsumeMessage();
             firtsMessage = false;
+            dialog.text = ConsumeMessage();
         }
 
         if (anyMessage && input.action1WasPress)
         {
-            dialog.text = ConsumeMessage();
-        }
 
-        if (!anyMessage) {
-            onTrigger = false;
-            firtsMessage = true;
-            
-            Invoke("FadeOutTransition", 1);
+            dialog.text = ConsumeMessage();
+
+            if (messages.Count == 0)
+            {
+                Invoke("FadeOutTransition", 2);
+            }
         }
     }
 
     private void FadeOutTransition() {
         if (img != null && text != null) {
-            // StartCoroutine(fadeMessages.FadeOut(img, text));
+
+            onTrigger = false;
+            firtsMessage = true;
+
+            StartCoroutine(fadeMessages.FadeOut(img, text));
+
         }
     }
 }

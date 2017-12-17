@@ -32,6 +32,8 @@ public class Hints : Message
         onTrigger = false;
         showingMessage = false;
 
+        StartCoroutine(fadeMessages.FadeOut(img, text));
+
         yield break;
     }
 }
