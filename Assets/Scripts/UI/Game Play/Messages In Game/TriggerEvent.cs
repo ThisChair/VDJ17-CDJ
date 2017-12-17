@@ -32,9 +32,6 @@ public class TriggerEvent : MonoBehaviour
     public MessagesAsset info;
     public MessagesAsset mesajeAux;
 
-    public bool turnOnActionBar;
-    public bool pierdoVida;
-    public bool bajaBondad;
     public GameObject desapearGO;
 
     private void Start()
@@ -78,17 +75,15 @@ public class TriggerEvent : MonoBehaviour
         {
             switch (enventNum) {
                 case EventNum.ONE:
-
                     actionBar.SetTurn();
-
                     break;
 
                 case EventNum.TWO:
                     actionBar.SetTurn();
-
                     break;
 
                 case EventNum.THREE:
+                    actionBar.SetTurn();
                     break;
 
                 case EventNum.FOUR:

@@ -9,6 +9,9 @@ public class Dialogs : Message
     InputControl input;
     public PlayerController player;
 
+    public AudioClip clipA;
+    public AudioSource aS;
+
     public override void Start()
     {
         base.Start();
@@ -66,6 +69,9 @@ public class Dialogs : Message
                 }
 
                 action.TakeAction(false);
+
+                aS.clip = clipA;
+                aS.Play();
                 print("Bad decision");
             }
         }

@@ -168,7 +168,7 @@ MonoBehaviour:
   dropdown: {fileID: 0}
   isDropdownField: 0
   up: {fileID: 367559716}
-  down: {fileID: 1373532471}
+  down: {fileID: 1648068677}
   left: {fileID: 0}
   right: {fileID: 0}
 --- !u!114 &49939531
@@ -1018,7 +1018,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Demo 3
+          m_StringArgument: Demo
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1712,8 +1712,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Action1: 32
   Action2: 120
+  Action3: 0
+  Action4: 0
   action1WasPress: 0
   action2WasPress: 0
+  action3WasPress: 0
+  action4WasPress: 0
   verticalDir: 0
   horizontalDir: 0
   horizontalInput: 0
@@ -3640,7 +3644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1373532470
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4376,7 +4380,7 @@ MonoBehaviour:
   text: {fileID: 0}
   dropdown: {fileID: 0}
   isDropdownField: 0
-  up: {fileID: 1373532471}
+  up: {fileID: 49939530}
   down: {fileID: 0}
   left: {fileID: 0}
   right: {fileID: 0}

@@ -26,6 +26,9 @@ public class ActionBarUI : MonoBehaviour
     public Color sliderColor;
     public Color zoneAcceptationColor;
 
+    public AudioClip clipA;
+    public AudioSource aS;
+
     private FadeMethods fade = new FadeMethods();
 
     private void Start()
@@ -64,7 +67,11 @@ public class ActionBarUI : MonoBehaviour
             {
                 if (input.action2WasPress && !turningOff)
                 {
+                    GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                     print("mal");
+
+                    aS.clip = clipA;
+                    aS.Play();
                     StartCoroutine(TurnOff());
                 }
             }
