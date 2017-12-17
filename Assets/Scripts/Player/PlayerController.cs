@@ -77,19 +77,22 @@ public class PlayerController : MonoBehaviour
 	[Tooltip("Activa modo runner")]
 	private bool runner = false;
 
-    void Awake()
+    private AudioSource audioSource;
+
+    private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    void Start()
+    private void Start()
     {
         height = GetComponent<CapsuleCollider2D>().size.y / 2f;
         initialJumpVel = JumpInitialVelocity(maxJumpHeight);
         GetComponent<Rigidbody2D> ().freezeRotation = true;
     }
 
-    void Update()
+    private void Update()
     {
         if (canMove && canJump && isGroundedPlayer
             && Input.GetButtonDown(jumpButton)) Jump();
@@ -101,7 +104,7 @@ public class PlayerController : MonoBehaviour
 		else velocity.x = 0f;
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         IsGrounded();
     }
@@ -123,6 +126,8 @@ public class PlayerController : MonoBehaviour
         Vector2 vel = body.velocity;
         vel.y += initialJumpVel;
         body.velocity = vel;
+
+        audioSource.Play();
     }
 
     // Revisa y guarda si se esta tocando el suelo
@@ -145,7 +150,7 @@ public class PlayerController : MonoBehaviour
 #endif
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
 #if UNITY_EDITOR
         if (debugIsGrounded)
