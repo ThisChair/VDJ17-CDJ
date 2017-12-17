@@ -52,6 +52,7 @@ public class Dialogs : Message
                     Invoke("FadeOutTransition", 2);
                 }
 
+                action.TakeAction(true);
                 print("Good decision");
             }
 
@@ -64,6 +65,7 @@ public class Dialogs : Message
                     Invoke("FadeOutTransition", 0.4f);
                 }
 
+                action.TakeAction(false);
                 print("Bad decision");
             }
         }

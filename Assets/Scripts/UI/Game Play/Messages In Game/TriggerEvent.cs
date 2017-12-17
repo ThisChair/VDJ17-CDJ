@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerEvent : MonoBehaviour {
+public class TriggerEvent : MonoBehaviour
+{
 
-    public enum MessageType {
+    public enum MessageType
+    {
         HINT,
         DIALOG,
         ACTION_BAR
@@ -20,6 +22,11 @@ public class TriggerEvent : MonoBehaviour {
 
     public MessagesAsset info;
 
+    public bool turnOnActionBar;
+    public bool pierdoVida;
+    public bool bajaBondad;
+    public GameObject desapearGO;
+
     private void Start()
     {
         hint = GameObject.Find("HintText").GetComponent<Message>();
@@ -29,7 +36,8 @@ public class TriggerEvent : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !visited) {
+        if (other.CompareTag("Player") && !visited)
+        {
 
             visited = true;
 
@@ -38,7 +46,8 @@ public class TriggerEvent : MonoBehaviour {
                 hint.SetMessages(info.messages);
             }
 
-            else if (messageType == MessageType.DIALOG) {
+            else if (messageType == MessageType.DIALOG)
+            {
                 dialog.SetMessages(info.messages, info.isDecision);
 
             }
@@ -48,5 +57,23 @@ public class TriggerEvent : MonoBehaviour {
                 actionBar.SetTurn();
             }
         }
+    }
+
+
+    public void TakeAction(bool decision)
+    {
+
+        // Good decision
+        if (decision)
+        {
+
+        }
+
+        // Bad Decision
+        else
+        {
+
+        }
+
     }
 }

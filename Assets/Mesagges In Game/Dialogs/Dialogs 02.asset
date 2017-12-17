@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c3d11c7d33bb344ab2f30de06a0599b, type: 3}
-  m_Name: Hint 1
+  m_Name: Dialogs 02
   m_EditorClassIdentifier: 
   messages:
-  - Para mover al jugador presiona las teclas de direccion w/a/s/d o las flechas de
-    direccion
-  isDecision: 0
+  - 'Evento 2 - Tipo en las sombras '
+  - 'Evento 2 - Tipo en las sombras '
+  isDecision: 1

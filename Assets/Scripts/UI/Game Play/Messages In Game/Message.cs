@@ -20,7 +20,8 @@ public class Message : MonoBehaviour
     public AudioClip clip;
     public FadeMethods fadeMessages = new FadeMethods();
 
-    public bool isDecision;
+    [HideInInspector] public bool isDecision;
+    [HideInInspector] public TriggerEvent action;
 
     public virtual void Start()
     {
@@ -34,21 +35,24 @@ public class Message : MonoBehaviour
         return message = messages.Dequeue();
     }
 
-    public void SetMessages(string[] msgs, bool decisionMsg = false)
+    public void SetMessages(string[] msgs, bool decisionMsg = false, TriggerEvent eventGO = null)
     {
         if (decisionMsg)
         {
             isDecision = true;
+            action = eventGO;
         }
         else {
             isDecision = false;
+            action = null;
         }
 
         anyMessage = true;
         messages = new Queue<string>(msgs);
 
-        if (clip != null)
+        if (clip != null) {
             AudioController.SetAndPlayAudioClip(clip, 0.3f);
+        }
 
         StartCoroutine(fadeMessages.FadeIn(img, text, spriteColor, textColor));
     }
