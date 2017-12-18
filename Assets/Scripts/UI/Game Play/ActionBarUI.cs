@@ -32,6 +32,8 @@ public class ActionBarUI : MonoBehaviour
     private FadeMethods fade = new FadeMethods();
     public PlayerController player;
 
+    public MenuController menu;
+
     private void Start()
     {
         bar = GetComponent<Slider>();
@@ -90,6 +92,11 @@ public class ActionBarUI : MonoBehaviour
         StartCoroutine(fade.ImageFadeIn(zoneAcceptation, zoneAcceptationColor));
 
         yield return new WaitUntil(() => ball.color.a >= 0.95f);
+
+
+        yield return new WaitForSeconds(clipA.length);
+
+        menu.LoadScene(0);
 
         turningOn = false;
         yield break;
