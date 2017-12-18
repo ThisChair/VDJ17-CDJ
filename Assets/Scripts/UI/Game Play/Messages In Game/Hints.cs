@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Hints : Message
 {
     Text hint;
-    float timeLimit = 4;
+    float timeLimit = 1.2f;
     private bool showingMessage;
 
     public override void Start()

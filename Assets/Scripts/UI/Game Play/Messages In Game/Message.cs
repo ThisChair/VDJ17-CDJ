@@ -13,6 +13,7 @@ public class Message : MonoBehaviour
 
     [HideInInspector] public Image img;
     [HideInInspector] public Text text;
+    public Text controlText;
 
     public Color spriteColor;
     public Color textColor;
@@ -21,6 +22,7 @@ public class Message : MonoBehaviour
     public FadeMethods fadeMessages = new FadeMethods();
 
     [HideInInspector] public bool isDecision;
+    [HideInInspector] public string text2;
     [HideInInspector] public TriggerEvent action;
 
     public virtual void Start()
@@ -35,16 +37,18 @@ public class Message : MonoBehaviour
         return message = messages.Dequeue();
     }
 
-    public void SetMessages(string[] msgs, bool decisionMsg = false, TriggerEvent eventGO = null)
+    public void SetMessages(string[] msgs, bool decisionMsg = false, TriggerEvent eventGO = null, bool control = false)
     {
         if (decisionMsg)
         {
             isDecision = true;
             action = eventGO;
+            text2 = "Press Y or N to answer";
         }
         else {
             isDecision = false;
             action = null;
+            text2 = "Press Space key to continue";
         }
 
         anyMessage = true;
@@ -54,6 +58,12 @@ public class Message : MonoBehaviour
             AudioController.SetAndPlayAudioClip(clip, 0.1f);
         }
 
-        StartCoroutine(fadeMessages.FadeIn(img, text, spriteColor, textColor));
+        if (!control)
+        {
+            StartCoroutine(fadeMessages.FadeIn(img, text, spriteColor, textColor));
+        }
+        else {
+            StartCoroutine(fadeMessages.FadeIn(img, text, spriteColor, textColor, controlText));
+        }
     }
 }

@@ -56,7 +56,7 @@ public class Dialogs : Message
                 }
 
                 action.TakeAction(true);
-                print("Good decision");
+                // print("Good decision");
             }
 
             else if (anyMessage && input.action4WasPress)
@@ -72,7 +72,7 @@ public class Dialogs : Message
 
                 aS.clip = clipA;
                 aS.Play();
-                print("Bad decision");
+                // print("Bad decision");
             }
         }
 
@@ -85,7 +85,7 @@ public class Dialogs : Message
             onTrigger = false;
             firtsMessage = true;
 
-            StartCoroutine(fadeMessages.FadeOut(img, text));
+            StartCoroutine(fadeMessages.FadeOut(img, text, controlText));
             player.canMove = true;
         }
     }

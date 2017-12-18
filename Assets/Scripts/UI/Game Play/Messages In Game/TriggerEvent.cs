@@ -55,7 +55,7 @@ public class TriggerEvent : MonoBehaviour
 
             else if (messageType == MessageType.DIALOG)
             {
-                dialog.SetMessages(info.messages, info.isDecision, this);
+                dialog.SetMessages(info.messages, info.isDecision, this, true);
 
             }
 

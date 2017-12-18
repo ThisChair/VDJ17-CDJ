@@ -60,7 +60,7 @@ public class ActionBarUI : MonoBehaviour
             {
                 if (input.action1WasPress && !turningOff)
                 {
-                    print("bien");
+                    // print("bien");
                     StartCoroutine(TurnOff());
                 }
             }
@@ -69,8 +69,8 @@ public class ActionBarUI : MonoBehaviour
             {
                 if (input.action1WasPress && !turningOff)
                 {
-                    GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
-                    print("mal");
+                    player.SetLife();
+                    // print("mal");
 
                     aS.clip = clipA;
                     aS.Play();
