@@ -10,11 +10,14 @@ public class InputControl : MonoBehaviour
     public KeyCode Action4;
 
 
+
     [HideInInspector] public bool action1WasPress;
     [HideInInspector] public bool action2WasPress;
 
     [HideInInspector] public bool action3WasPress;
     [HideInInspector] public bool action4WasPress;
+
+    [HideInInspector] public bool action5WasPress;
 
     [HideInInspector] public float verticalDir;
     [HideInInspector] public float horizontalDir;
@@ -43,6 +46,11 @@ public class InputControl : MonoBehaviour
     private bool Action4WasPress()
     {
         return Input.GetKeyDown(Action4);
+    }
+
+    private bool Action5WasPress()
+    {
+        return Input.GetKeyDown(KeyCode.Escape);
     }
 
     private void HorizontalAxis()
@@ -87,6 +95,7 @@ public class InputControl : MonoBehaviour
         action2WasPress = Action2WasPress();
         action3WasPress = Action3WasPress();
         action4WasPress = Action4WasPress();
+        action5WasPress = Action5WasPress();
 
         HorizontalAxis();
         VerticalAxis();

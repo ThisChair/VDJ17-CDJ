@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Define si el jugador esta vivo")]
     private bool alive = true;
 
+    private bool paused = false;
+
     [Tooltip("Si puede Saltar")]
     public bool canJump = true;
 
@@ -99,14 +101,18 @@ public class PlayerController : MonoBehaviour
         alive = false;
     }
 
+    public void SetPause() {
+        paused = !paused;
+    }
+
     private void Update()
     {
-        if (alive && canMove && canJump && isGroundedPlayer
+        if (!paused && alive && canMove && canJump && isGroundedPlayer
             && Input.GetButtonDown(jumpButton)) Jump();
 
         velocity.y = body.velocity.y;
 
-		if (alive && canMove && (Input.GetButton(horizontalMove) || runner)) Run();
+		if (!paused && alive && canMove && (Input.GetButton(horizontalMove) || runner)) Run();
 		else velocity.x = 0f;
     }
 
