@@ -4721,6 +4721,7 @@ GameObject:
   - component: {fileID: 1296458501}
   - component: {fileID: 1296458503}
   - component: {fileID: 1296458502}
+  - component: {fileID: 1296458504}
   m_Layer: 0
   m_Name: Encuentro Anciana
   m_TagString: Untagged
@@ -4783,6 +4784,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.498505, y: 1.5200583}
   m_EdgeRadius: 0
+--- !u!114 &1296458504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1296458500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a2a68f670dd6448bbd5b8b0e9f70b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visited: 0
+  enventNum: 0
+  messageType: 1
+  info: {fileID: 11400000, guid: 4720a32b6fc0b314d9f5031353ff391e, type: 2}
+  mesajeAux: {fileID: 11400000, guid: 613423bdb0187514fac91964eddf4a24, type: 2}
+  desapearGO: {fileID: 0}
 --- !u!1 &1332785428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,6 +5267,7 @@ GameObject:
   - component: {fileID: 1398574116}
   - component: {fileID: 1398574118}
   - component: {fileID: 1398574117}
+  - component: {fileID: 1398574119}
   m_Layer: 0
   m_Name: Encuentro Tipo Raro
   m_TagString: Untagged
@@ -5311,6 +5330,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.498505, y: 1.5200583}
   m_EdgeRadius: 0
+--- !u!114 &1398574119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1398574115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a2a68f670dd6448bbd5b8b0e9f70b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visited: 0
+  enventNum: 0
+  messageType: 1
+  info: {fileID: 11400000, guid: 3ff6dbba95947444c9580fd72d2efa3c, type: 2}
+  mesajeAux: {fileID: 11400000, guid: 613423bdb0187514fac91964eddf4a24, type: 2}
+  desapearGO: {fileID: 0}
 --- !u!1 &1399500343
 GameObject:
   m_ObjectHideFlags: 0
