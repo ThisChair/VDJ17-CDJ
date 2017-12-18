@@ -178,7 +178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -299.9999, y: 0}
+  m_AnchoredPosition: {x: -299.9998, y: 0}
   m_SizeDelta: {x: -600, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &33792108
@@ -624,6 +624,7 @@ GameObject:
   - component: {fileID: 90521699}
   - component: {fileID: 90521698}
   - component: {fileID: 90521697}
+  - component: {fileID: 90521700}
   m_Layer: 0
   m_Name: Encuentro GNB
   m_TagString: Untagged
@@ -686,6 +687,23 @@ Transform:
   m_Father: {fileID: 1940613474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &90521700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 90521696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a2a68f670dd6448bbd5b8b0e9f70b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visited: 0
+  enventNum: 0
+  messageType: 0
+  info: {fileID: 11400000, guid: fc571fe6beb3bbc4ab2fac575c969999, type: 2}
+  mesajeAux: {fileID: 0}
+  desapearGO: {fileID: 0}
 --- !u!1 &150922362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -299.9999, y: 0}
+  m_AnchoredPosition: {x: -299.9998, y: 0}
   m_SizeDelta: {x: -600, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &298487583
@@ -4734,9 +4752,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visited: 0
-  enventNum: 2
-  messageType: 1
-  info: {fileID: 11400000, guid: 4720a32b6fc0b314d9f5031353ff391e, type: 2}
+  enventNum: 0
+  messageType: 0
+  info: {fileID: 11400000, guid: e1e08a5b9a9098446ae3a5566065269d, type: 2}
   mesajeAux: {fileID: 0}
   desapearGO: {fileID: 0}
 --- !u!61 &1296458503
@@ -5262,9 +5280,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visited: 0
-  enventNum: 1
-  messageType: 1
-  info: {fileID: 11400000, guid: 3ff6dbba95947444c9580fd72d2efa3c, type: 2}
+  enventNum: 0
+  messageType: 0
+  info: {fileID: 11400000, guid: 2e7bd2bc5dd499c4a8e4ffc4ec9ac34b, type: 2}
   mesajeAux: {fileID: 0}
   desapearGO: {fileID: 0}
 --- !u!61 &1398574118
@@ -9401,7 +9419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -269.4998, y: 174}
+  m_AnchoredPosition: {x: -269.49966, y: 174}
   m_SizeDelta: {x: -571, y: -380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499096374
