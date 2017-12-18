@@ -98,7 +98,7 @@ public class TriggerEvent : MonoBehaviour
             {
                 case EventNum.ONE:
                     Destroy(desapearGO);
-                    dialog.SetMessages(mesajeAux.messages);
+                    // dialog.SetMessages(mesajeAux.messages);
 
                     break;
 

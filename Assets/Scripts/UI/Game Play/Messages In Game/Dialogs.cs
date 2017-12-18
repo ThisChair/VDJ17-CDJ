@@ -70,8 +70,6 @@ public class Dialogs : Message
 
                 action.TakeAction(false);
 
-                aS.clip = clipA;
-                aS.Play();
                 // print("Bad decision");
             }
         }
