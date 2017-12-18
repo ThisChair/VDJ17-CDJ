@@ -94,9 +94,9 @@ public class ActionBarUI : MonoBehaviour
         yield return new WaitUntil(() => ball.color.a >= 0.95f);
 
 
-        yield return new WaitForSeconds(clipA.length);
+        // yield return new WaitForSeconds(clipA.length);
 
-        menu.LoadScene(0);
+        // menu.LoadScene(0);
 
         turningOn = false;
         yield break;
