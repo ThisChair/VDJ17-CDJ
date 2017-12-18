@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - 'Guard: Hey there, cutie. Do you happen to have some cash?'
-  isDecision: 0
+  - 'Guard: Hey there, cutie. Do you happen to have some cash?'
+  isDecision: 1

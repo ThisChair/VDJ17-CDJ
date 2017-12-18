@@ -51,7 +51,7 @@ public class Message : MonoBehaviour
         messages = new Queue<string>(msgs);
 
         if (clip != null) {
-            AudioController.SetAndPlayAudioClip(clip, 0.3f);
+            AudioController.SetAndPlayAudioClip(clip, 0.1f);
         }
 
         StartCoroutine(fadeMessages.FadeIn(img, text, spriteColor, textColor));

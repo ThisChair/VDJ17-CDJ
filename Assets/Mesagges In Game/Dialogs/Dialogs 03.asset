@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - Good evening. Would you help me find my necklace in the trash bin?
+  - Good evening. Would you help me find my necklace in the trash bin?
   isDecision: 1

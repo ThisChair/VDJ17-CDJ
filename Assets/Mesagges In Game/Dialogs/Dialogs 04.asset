@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - You win!
+  - You win!
   isDecision: 0

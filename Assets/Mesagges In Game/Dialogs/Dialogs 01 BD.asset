@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messages:
   - Bad Bad
+  - Bad Bad
   isDecision: 0

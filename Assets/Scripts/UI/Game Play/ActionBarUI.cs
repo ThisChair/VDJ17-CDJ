@@ -30,10 +30,12 @@ public class ActionBarUI : MonoBehaviour
     public AudioSource aS;
 
     private FadeMethods fade = new FadeMethods();
+    public PlayerController player;
 
     private void Start()
     {
         bar = GetComponent<Slider>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     public void SetTurn() {
@@ -56,7 +58,7 @@ public class ActionBarUI : MonoBehaviour
 
             if (bar.value >= rightmost && bar.value <= leftmost)
             {
-                if (input.action2WasPress && !turningOff)
+                if (input.action1WasPress && !turningOff)
                 {
                     print("bien");
                     StartCoroutine(TurnOff());
@@ -65,7 +67,7 @@ public class ActionBarUI : MonoBehaviour
 
             if (bar.value < rightmost || bar.value > leftmost)
             {
-                if (input.action2WasPress && !turningOff)
+                if (input.action1WasPress && !turningOff)
                 {
                     GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
                     print("mal");
@@ -81,6 +83,8 @@ public class ActionBarUI : MonoBehaviour
     private IEnumerator TurningOn() {
 
         display = true;
+        player.enabled = false;
+
         StartCoroutine(fade.ImageFadeIn(ball, ballColor));
         StartCoroutine(fade.ImageFadeIn(slider, sliderColor));
         StartCoroutine(fade.ImageFadeIn(zoneAcceptation, zoneAcceptationColor));
@@ -94,6 +98,7 @@ public class ActionBarUI : MonoBehaviour
     private IEnumerator TurnOff() {
 
         turningOff = true;
+        player.enabled = true;
 
         StartCoroutine(fade.ImageFadeOut(ball));
         StartCoroutine(fade.ImageFadeOut(slider));
